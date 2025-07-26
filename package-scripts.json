@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "quick-start": "node scripts/quick-deploy.js",
+    "dev:demo": "NODE_ENV=demo npm run dev",
+    "deploy:vercel": "vercel --prod",
+    "deploy:railway": "railway deploy",
+    "setup:all": "npm run db:migrate && npm run db:seed && npm run search:setup && npm run vector:setup"
+  }
+}
