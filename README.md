@@ -485,6 +485,9 @@ papramind/
 ├── docker-compose.yml         # Development environment
 ├── Dockerfile                 # Production container
 ├── railway.json              # Railway deployment config
+├── fix.sh                     # Dependency fix script (Linux/macOS)
+├── fix.bat                    # Dependency fix script (Windows)
+├── fix-deps.js               # Node.js dependency fix script
 └── package.json              # Dependencies and scripts
 ```
 

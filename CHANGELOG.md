@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.0.1] - 2025-01-26
+
+### 🔧 Added Dependency Fix Scripts
+
+**New Features**
+
+- **fix.sh**: Automated dependency fix script for Linux/macOS
+- **fix.bat**: Automated dependency fix script for Windows
+- **Enhanced Documentation**: Updated README, Quick Start Guide, and Development Guide with fix script instructions
+
+**What the Fix Scripts Do**
+
+- Clean old dependencies and npm cache
+- Install dependencies with legacy peer dependency resolution
+- Test build to ensure everything works
+- Provide next steps for configuration
+
+**Usage**
+
+```bash
+# Linux/macOS
+chmod +x fix.sh
+./fix.sh
+
+# Windows
+fix.bat
+```
+
 ## [1.0.0] - 2025-01-26
 
 ### 🔄 Major Platform Simplification

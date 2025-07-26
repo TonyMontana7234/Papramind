@@ -1,4 +1,5 @@
 @echo off
+
 echo 🔧 Fixing Papramind Dependencies
 echo ================================
 
@@ -14,7 +15,6 @@ npm install --legacy-peer-deps
 
 echo Step 4: Testing build...
 npm run build
-
 if %errorlevel% equ 0 (
     echo.
     echo ✅ SUCCESS! All issues fixed!
