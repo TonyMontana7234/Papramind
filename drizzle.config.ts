@@ -5,14 +5,19 @@ export default {
   schema: './src/lib/db/schema/*.ts',
   out: './migrations',
   dialect: 'postgresql',
-  dbCredentials: {
-    host: databaseConfig.host,
-    port: databaseConfig.port,
-    user: databaseConfig.username,
-    password: databaseConfig.password,
-    database: databaseConfig.database,
-    ssl: databaseConfig.ssl,
-  },
+  dbCredentials: process.env.DATABASE_URL 
+    ? {
+        url: process.env.DATABASE_URL,
+        ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+      }
+    : {
+        host: databaseConfig.host,
+        port: databaseConfig.port,
+        user: databaseConfig.username,
+        password: databaseConfig.password,
+        database: databaseConfig.database,
+        ssl: databaseConfig.ssl,
+      },
   verbose: true,
   strict: true,
 } satisfies Config

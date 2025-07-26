@@ -1,6 +1,8 @@
-# Papramind - AI-Powered Document Management Platform
+# PapraMind - AI Document Management Platform
 
-Papramind is an enterprise-grade intelligent document management and collaboration platform that combines AI-powered organization, workflow automation, advanced analytics, and seamless integrations with Google Workspace and Microsoft 365.
+**Version 1.0.0** - AI-powered document management platform with workflow automation and analytics.
+
+PapraMind is an intelligent document management and collaboration platform that combines AI-powered organization, workflow automation, and advanced analytics capabilities.
 
 ## 🚀 Current Implementation Status
 
@@ -8,25 +10,22 @@ Papramind is an enterprise-grade intelligent document management and collaborati
 
 **Core Platform Infrastructure**
 
-- **Authentication & Authorization**: Clerk-based authentication with RBAC, MFA support, and secure session management
-- **Document Management**: Full CRUD operations with versioning, metadata management, and granular permissions
-- **File Storage**: AWS S3 integration with virus scanning, validation, and presigned URL uploads
-- **Database**: PostgreSQL with Drizzle ORM, comprehensive schema, and optimized indexing
-- **Security**: Rate limiting, input validation, file sanitization, and comprehensive permission system
+- **Authentication & Authorization**: Clerk-based authentication with secure session management
+- **Document Management**: Full CRUD operations with versioning, metadata management, and permissions
+- **File Storage**: Secure file handling with validation and upload capabilities
+- **Database**: PostgreSQL with Drizzle ORM and comprehensive schema
+- **Security**: Input validation with Zod v3.23.8 and comprehensive security measures
 
 **AI & Search Capabilities**
 
-- **AI Integration**: OpenAI GPT-4 integration with document analysis, categorization, entity extraction, and summarization
-- **Vector Search**: Pinecone-powered semantic search with natural language queries and document similarity
-- **Full-Text Search**: Elasticsearch integration with advanced filtering, faceted search, and performance optimization
-- **Hybrid Search**: Combined semantic and keyword search for optimal document discovery
+- **AI Integration**: OpenAI GPT-4 integration with document analysis, categorization, and summarization
+- **Search**: Advanced search capabilities with filtering and document discovery
 
 **Advanced Features**
 
-- **Workflow Automation**: Visual drag-and-drop workflow builder with approval processes, conditional logic, and template library
-- **Analytics Dashboard**: Comprehensive analytics with document performance tracking, predictive insights, and custom reporting
-- **External Integrations**: Complete Google Workspace and Microsoft 365 integrations with OAuth, file sync, and real-time webhooks
-- **Background Processing**: Automated data aggregation, analytics processing, and system maintenance jobs
+- **Workflow Automation**: Visual drag-and-drop workflow builder with approval processes and conditional logic
+- **Analytics Dashboard**: Comprehensive analytics with document performance tracking and predictive insights
+- **Background Processing**: Automated data aggregation and analytics processing
 
 **Development & Deployment**
 
@@ -65,23 +64,14 @@ Papramind is an enterprise-grade intelligent document management and collaborati
 **Backend & API**
 
 - **Runtime**: Node.js with TypeScript in strict mode
-- **Database**: PostgreSQL with Drizzle ORM, Redis for caching
-- **Search**: Elasticsearch for full-text search and indexing
-- **File Storage**: AWS S3 with presigned URLs and virus scanning
-- **Security**: Rate limiting, input validation, file sanitization
+- **Database**: PostgreSQL with Drizzle ORM
+- **File Storage**: Secure file handling and storage
+- **Security**: Input validation with Zod v3.23.8, comprehensive security measures
 
 **AI & Machine Learning**
 
 - **AI Platform**: OpenAI GPT-4 for document analysis and insights
-- **Vector Database**: Pinecone for semantic search and document similarity
-- **Embeddings**: OpenAI text-embedding-ada-002 for vector generation
-- **Content Processing**: Multi-format content extraction (PDF, Office, HTML, Markdown)
-
-**External Integrations**
-
-- **Google Workspace**: Drive, Docs, Calendar, Gmail integration with OAuth 2.0
-- **Microsoft 365**: OneDrive, Teams, Outlook, SharePoint integration
-- **Webhooks**: Real-time synchronization with external services
+- **Content Processing**: Multi-format content extraction and analysis
 
 **Infrastructure & Deployment**
 
@@ -114,6 +104,24 @@ Papramind is an enterprise-grade intelligent document management and collaborati
    ```bash
    npm install
    ```
+
+   **If you encounter dependency issues**, use the automated fix script:
+
+   ```bash
+   # Linux/macOS
+   chmod +x fix.sh
+   ./fix.sh
+
+   # Windows
+   fix.bat
+   ```
+
+   The fix script will:
+
+   - Clean old dependencies and cache
+   - Install with legacy peer dependency resolution
+   - Test the build to ensure everything works
+   - Provide next steps for configuration
 
 3. **Set up environment variables**
 
@@ -212,25 +220,20 @@ The script will:
 
 **Service Setup**
 
-- `npm run search:setup` - Initialize Elasticsearch indexes
-- `npm run vector:setup` - Setup Pinecone vector database
 - `./scripts/setup-github.sh` - Automated GitHub repository setup (Linux/macOS)
 - `scripts\setup-github.bat` - Automated GitHub repository setup (Windows)
+- `./fix.sh` - Fix dependency issues and build problems (Linux/macOS)
+- `fix.bat` - Fix dependency issues and build problems (Windows)
 
 **Deployment**
 
 - `npm run deploy:railway` - Deploy to Railway
-- `npm run railway:setup` - Setup Railway services (PostgreSQL, Redis)
-- `npm run railway:migrate` - Run database migrations on Railway
 
 **Validation & Testing**
 
 - `node validate-implementation.js` - Validate overall system implementation
-- `node validate-vector-implementation.js` - Validate vector search implementation
 - `node validate-workflow-implementation.js` - Validate workflow automation
-- `node validate-microsoft-implementation.js` - Validate Microsoft 365 integration
 - `node validate-dashboard.js` - Validate analytics dashboard
-- `node test-vector-implementation.js` - Test vector search functionality
 
 ### Development Environment
 
@@ -252,9 +255,6 @@ The development environment includes:
 
 - **App** (Port 3000): Next.js application
 - **PostgreSQL** (Port 5432): Primary database
-- **Redis** (Port 6379): Caching and real-time features
-- **Elasticsearch** (Port 9200): Search and indexing
-- **Kibana** (Port 5601): Elasticsearch management UI
 
 ## Deployment
 

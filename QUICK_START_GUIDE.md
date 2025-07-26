@@ -1,24 +1,22 @@
-# 🚀 Papramind - Quick Start Guide
+# 🚀 PapraMind - Quick Start Guide
 
-Get up and running with the enterprise-grade AI document management platform in minutes.
+Get up and running with the AI-powered document management platform in minutes.
 
 ## 🎯 What You'll Get
 
-**Complete Platform Features:**
+**Core Platform Features:**
 
-- 🔐 Authentication with Clerk (SSO, MFA, RBAC)
+- 🔐 Authentication with Clerk
 - 📄 Document management with AI analysis
-- 🔍 Semantic search with vector embeddings
 - ⚡ Workflow automation with visual builder
-- 📊 Analytics dashboard with predictive insights
-- 🔗 Google Workspace & Microsoft 365 integrations
-- 🧪 95%+ test coverage with comprehensive validation
+- 📊 Analytics dashboard with insights
+- 🧪 Comprehensive test coverage
 
 ## 🚀 Quick Start Options
 
-### Option 1: Full Development Setup (Recommended)
+### Option 1: Development Setup (Recommended)
 
-**Complete platform with all features enabled**
+**Core platform with essential features**
 
 1. **Clone and Install**
 
@@ -28,6 +26,17 @@ Get up and running with the enterprise-grade AI document management platform in 
    npm install
    ```
 
+   **If you encounter dependency issues:**
+
+   ```bash
+   # Linux/macOS
+   chmod +x fix.sh
+   ./fix.sh
+
+   # Windows
+   fix.bat
+   ```
+
 2. **Configure Environment**
 
    ```bash
@@ -35,7 +44,7 @@ Get up and running with the enterprise-grade AI document management platform in 
    # Edit .env.local with your API keys
    ```
 
-   **Required for basic functionality:**
+   **Required for functionality:**
 
    - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` - Clerk authentication
    - `CLERK_SECRET_KEY` - Clerk backend
@@ -83,6 +92,14 @@ Get up and running with the enterprise-grade AI document management platform in 
    ```bash
    npm install
    cp .env.example .env.local
+   ```
+
+   **If you encounter dependency issues:**
+
+   ```bash
+   # Use the automated fix script
+   ./fix.sh    # Linux/macOS
+   fix.bat     # Windows
    ```
 
 2. **Minimal Environment Setup**
@@ -339,22 +356,34 @@ curl http://localhost:3000/api/analytics/predictions \
 
 ### Common Issues
 
-1. **Database Connection Error**
+1. **Dependency/Build Issues**
+
+   ```bash
+   # Use the automated fix script
+   ./fix.sh    # Linux/macOS
+   fix.bat     # Windows
+   ```
+
+   - Cleans old dependencies and cache
+   - Installs with legacy peer dependency resolution
+   - Tests build to ensure everything works
+
+2. **Database Connection Error**
 
    - Ensure PostgreSQL is running
    - Check database credentials in `.env.local`
 
-2. **Authentication Issues**
+3. **Authentication Issues**
 
    - Verify Clerk API keys
    - Check Clerk dashboard configuration
 
-3. **File Upload Issues**
+4. **File Upload Issues**
 
    - Verify AWS S3 credentials
    - Check bucket permissions
 
-4. **Search Not Working**
+5. **Search Not Working**
    - Ensure Elasticsearch is running
    - Run `npm run search:setup`
 
