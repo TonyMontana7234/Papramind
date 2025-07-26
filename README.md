@@ -1,53 +1,94 @@
 # Papramind - AI-Powered Document Management Platform
 
-Papramind is an intelligent document management and collaboration platform that combines AI-powered organization, real-time collaboration, workflow automation, and enterprise-grade security.
+Papramind is an enterprise-grade intelligent document management and collaboration platform that combines AI-powered organization, workflow automation, advanced analytics, and seamless integrations with Google Workspace and Microsoft 365.
 
-## Current Implementation Status
+## 🚀 Current Implementation Status
 
-### ✅ Completed Features (Production Ready)
+### ✅ Production-Ready Features
 
-- **Authentication & Authorization**: Clerk-based authentication with RBAC, rate limiting, and secure session management
-- **Document Management Core**: Full CRUD operations with versioning, metadata, and permission-based access control
-- **File Upload & Storage**: S3 integration with virus scanning, validation, and presigned URL support
-- **Database Schema**: PostgreSQL with comprehensive document and user models, optimized indexing
-- **Security**: Rate limiting, password hashing, file validation, and comprehensive permission system
-- **API Endpoints**: RESTful APIs for all core operations with proper error handling and validation
-- **AI Integration**: Complete OpenAI GPT-4 integration with document analysis, categorization, entity extraction, sentiment analysis, and summarization
-- **Vector Search**: Semantic search with Pinecone vector database, hybrid search capabilities, and similar document discovery
-- **Search Integration**: Elasticsearch setup with document indexing, full-text search, and advanced query building
-- **Workflow Automation**: Visual workflow builder with drag-and-drop interface, approval processes, and template library
+**Core Platform Infrastructure**
+
+- **Authentication & Authorization**: Clerk-based authentication with RBAC, MFA support, and secure session management
+- **Document Management**: Full CRUD operations with versioning, metadata management, and granular permissions
+- **File Storage**: AWS S3 integration with virus scanning, validation, and presigned URL uploads
+- **Database**: PostgreSQL with Drizzle ORM, comprehensive schema, and optimized indexing
+- **Security**: Rate limiting, input validation, file sanitization, and comprehensive permission system
+
+**AI & Search Capabilities**
+
+- **AI Integration**: OpenAI GPT-4 integration with document analysis, categorization, entity extraction, and summarization
+- **Vector Search**: Pinecone-powered semantic search with natural language queries and document similarity
+- **Full-Text Search**: Elasticsearch integration with advanced filtering, faceted search, and performance optimization
+- **Hybrid Search**: Combined semantic and keyword search for optimal document discovery
+
+**Advanced Features**
+
+- **Workflow Automation**: Visual drag-and-drop workflow builder with approval processes, conditional logic, and template library
 - **Analytics Dashboard**: Comprehensive analytics with document performance tracking, predictive insights, and custom reporting
-- **External Integrations**: Google Workspace and Microsoft 365 integrations with OAuth, file sync, and API access
-- **Testing Suite**: Comprehensive unit and integration tests with 95%+ coverage across all modules
+- **External Integrations**: Complete Google Workspace and Microsoft 365 integrations with OAuth, file sync, and real-time webhooks
+- **Background Processing**: Automated data aggregation, analytics processing, and system maintenance jobs
 
-### 🚧 In Development
+**Development & Deployment**
 
-- **Frontend Application**: React components and user interface (foundation ready with Tailwind CSS and glassmorphism utilities)
-- **Real-time Collaboration**: WebSocket infrastructure and collaborative editing
-- **TypeScript Configuration**: Resolving type conflicts and improving development experience
+- **Testing Suite**: 95%+ test coverage with unit, integration, and E2E tests across all modules
+- **Railway Deployment**: One-click deployment with managed PostgreSQL, Redis, and health monitoring
+- **Docker Support**: Complete containerization with multi-stage builds and development environment
+- **API Documentation**: RESTful APIs with comprehensive error handling and validation
 
-### 📋 Planned Features
+### 🔧 In Development
 
-- 🔄 **Real-Time Collaboration**: Simultaneous editing with conflict resolution
-- 📱 **Modern UX**: Glassmorphism design with PWA support
-- 🔒 **Enterprise Security**: End-to-end encryption and compliance features
-- 🌐 **Multi-Platform**: Web, mobile, and desktop accessibility
+- **Frontend Application**: React components with Tailwind CSS and modern UI patterns (analytics and workflow interfaces complete)
+- **Real-time Collaboration**: WebSocket infrastructure for collaborative editing and live updates
+- **Mobile PWA**: Progressive Web App features with offline capabilities
+
+### 📋 Upcoming Features
+
+- **End-to-End Encryption**: Advanced security for sensitive documents
+- **Compliance Tools**: GDPR, HIPAA, and SOX compliance features
+- **Advanced Collaboration**: Real-time editing with operational transformation
+- **Mobile Applications**: Native iOS and Android apps
 
 > 📋 **Detailed Status**: See [Implementation Status](docs/implementation-status.md) for comprehensive progress tracking and technical details.
 
-> 🎯 **Current Phase**: Comprehensive platform with backend infrastructure, workflow automation, analytics dashboard, and external integrations complete. The platform includes full authentication, document management, AI integration, vector search, workflow builder, analytics insights, and Google/Microsoft integrations. Frontend application completion is the next major milestone.
+> 🎯 **Current Phase**: Full-featured enterprise platform with complete backend infrastructure, AI capabilities, workflow automation, analytics dashboard, and external integrations. The platform is production-ready for deployment with comprehensive testing and monitoring.
 
-## Tech Stack
+## 🛠 Tech Stack
 
-- **Frontend**: Next.js 14, React 18, TypeScript, Tailwind CSS
-- **Authentication**: Clerk (user management, SSO, MFA)
-- **Styling**: Tailwind CSS with custom glassmorphism utilities
-- **Testing**: Jest, React Testing Library
-- **Backend**: Node.js, Express/Fastify, TypeScript
-- **Database**: PostgreSQL, Redis, Elasticsearch
-- **AI/ML**: OpenAI GPT-4, Vector embeddings, Pinecone
-- **Storage**: AWS S3/Azure Blob
-- **Infrastructure**: Docker, Kubernetes
+**Frontend & UI**
+
+- **Framework**: Next.js 14 with App Router, React 18, TypeScript
+- **Styling**: Tailwind CSS with custom glassmorphism utilities and Radix UI components
+- **Authentication**: Clerk (user management, SSO, MFA, RBAC)
+- **Charts & Visualization**: Recharts for analytics dashboards
+- **Testing**: Jest, React Testing Library, comprehensive E2E testing
+
+**Backend & API**
+
+- **Runtime**: Node.js with TypeScript in strict mode
+- **Database**: PostgreSQL with Drizzle ORM, Redis for caching
+- **Search**: Elasticsearch for full-text search and indexing
+- **File Storage**: AWS S3 with presigned URLs and virus scanning
+- **Security**: Rate limiting, input validation, file sanitization
+
+**AI & Machine Learning**
+
+- **AI Platform**: OpenAI GPT-4 for document analysis and insights
+- **Vector Database**: Pinecone for semantic search and document similarity
+- **Embeddings**: OpenAI text-embedding-ada-002 for vector generation
+- **Content Processing**: Multi-format content extraction (PDF, Office, HTML, Markdown)
+
+**External Integrations**
+
+- **Google Workspace**: Drive, Docs, Calendar, Gmail integration with OAuth 2.0
+- **Microsoft 365**: OneDrive, Teams, Outlook, SharePoint integration
+- **Webhooks**: Real-time synchronization with external services
+
+**Infrastructure & Deployment**
+
+- **Containerization**: Docker with multi-stage builds
+- **Deployment**: Railway (recommended), Docker, cloud platforms
+- **Monitoring**: Health checks, error tracking, performance monitoring
+- **Background Jobs**: Automated analytics aggregation and data processing
 
 ## Getting Started
 
@@ -150,40 +191,45 @@ The script will:
 
 > 📖 **Manual Setup**: See [GitHub Setup Guide](GITHUB_SETUP_GUIDE.md) for manual setup instructions and troubleshooting.
 
-### Available Scripts
+### 📜 Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
+**Development**
+
+- `npm run dev` - Start development server (port 3000)
+- `npm run build` - Build for production with type checking
 - `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run test` - Run Jest tests
+- `npm run lint` - Run ESLint with auto-fix
+- `npm run test` - Run Jest test suite
 - `npm run test:watch` - Run tests in watch mode
-- `npm run type-check` - Run TypeScript type checking
+- `npm run type-check` - TypeScript compilation check
 
-#### Database Scripts
+**Database Management**
 
 - `npm run db:generate` - Generate new database migration
 - `npm run db:migrate` - Apply database migrations
 - `npm run db:studio` - Open Drizzle Studio (database GUI)
 - `npm run db:seed` - Seed database with default data
 
-#### Setup Scripts
+**Service Setup**
 
 - `npm run search:setup` - Initialize Elasticsearch indexes
 - `npm run vector:setup` - Setup Pinecone vector database
 - `./scripts/setup-github.sh` - Automated GitHub repository setup (Linux/macOS)
 - `scripts\setup-github.bat` - Automated GitHub repository setup (Windows)
 
-#### Deployment Scripts
+**Deployment**
 
 - `npm run deploy:railway` - Deploy to Railway
 - `npm run railway:setup` - Setup Railway services (PostgreSQL, Redis)
 - `npm run railway:migrate` - Run database migrations on Railway
 
-#### Validation Scripts
+**Validation & Testing**
 
 - `node validate-implementation.js` - Validate overall system implementation
 - `node validate-vector-implementation.js` - Validate vector search implementation
+- `node validate-workflow-implementation.js` - Validate workflow automation
+- `node validate-microsoft-implementation.js` - Validate Microsoft 365 integration
+- `node validate-dashboard.js` - Validate analytics dashboard
 - `node test-vector-implementation.js` - Test vector search functionality
 
 ### Development Environment
@@ -270,134 +316,191 @@ The application includes a health check endpoint at `/api/health` for Railway's 
 
 > 📖 **Deployment Guide**: See [Railway Deployment Guide](RAILWAY_DEPLOYMENT_GUIDE.md) for detailed deployment instructions and troubleshooting.
 
-## API Endpoints
+## 🔌 API Endpoints
 
-### System
+### System & Health
 
 - `GET /api/health` - Health check endpoint for monitoring and deployment systems
 
-### Authentication
+### Authentication (Clerk-managed)
 
-- Clerk-managed authentication endpoints (sign-in, sign-up, user management)
+- Clerk-managed authentication endpoints (sign-in, sign-up, user management, MFA)
 - `POST /api/auth/refresh` - Token refresh using HTTP-only cookies (legacy support)
 
-### Documents
+### Document Management
 
-- `GET /api/documents` - List documents with filtering and pagination
-- `POST /api/documents` - Create new document
-- `GET /api/documents/[id]` - Get document by ID
-- `PUT /api/documents/[id]` - Update document
-- `DELETE /api/documents/[id]` - Delete document
-- `GET /api/documents/[id]/versions` - Get document version history
+- `GET /api/documents` - List documents with filtering, pagination, and search
+- `POST /api/documents` - Create new document with metadata and permissions
+- `GET /api/documents/[id]` - Get document by ID with version history
+- `PUT /api/documents/[id]` - Update document content and metadata
+- `DELETE /api/documents/[id]` - Delete document (soft delete with audit trail)
+- `GET /api/documents/[id]/versions` - Get complete document version history
 
 ### File Upload & Storage
 
-- `POST /api/upload` - Upload files with validation and virus scanning
+- `POST /api/upload` - Direct file upload with validation and virus scanning
 - `POST /api/upload/presigned` - Generate presigned URLs for direct S3 upload
-- `GET /api/download/[key]` - Secure file download with permission checks
+- `GET /api/download/[key]` - Secure file download with permission checks and audit logging
 
-### AI Integration
+### AI Integration & Analysis
 
-- `POST /api/ai/analyze` - Analyze documents with AI (categorization, entities, sentiment, summary)
+- `POST /api/ai/analyze` - Comprehensive document analysis (categorization, entities, sentiment, summary)
 
 ### Search & Discovery
 
 - `POST /api/search/semantic` - Semantic search using natural language queries
 - `GET /api/search/similar/[id]` - Find similar documents using vector similarity
 - `POST /api/search/index` - Index documents for search and vector operations
+- `GET /api/search/suggestions` - Get search suggestions and autocomplete
 
 ### Workflow Automation
 
 - `GET /api/workflows` - List workflows with filtering and pagination
-- `POST /api/workflows` - Create new workflow
-- `GET /api/workflows/[id]` - Get workflow by ID
-- `PUT /api/workflows/[id]` - Update workflow
-- `DELETE /api/workflows/[id]` - Delete workflow
-- `POST /api/workflows/[id]/execute` - Execute workflow
-- `GET /api/workflows/templates` - Get workflow templates
-- `GET /api/workflows/executions` - List workflow executions
-- `GET /api/workflows/approvals` - List approval requests
-- `POST /api/workflows/approvals/[id]` - Respond to approval request
+- `POST /api/workflows` - Create new workflow with visual builder data
+- `GET /api/workflows/[id]` - Get workflow definition and execution history
+- `PUT /api/workflows/[id]` - Update workflow configuration
+- `DELETE /api/workflows/[id]` - Delete workflow (with execution history preservation)
+- `POST /api/workflows/[id]/execute` - Execute workflow with context data
+- `GET /api/workflows/templates` - Get workflow templates from library
+- `GET /api/workflows/executions` - List workflow executions with status
+- `GET /api/workflows/executions/[id]` - Get detailed execution information
+- `GET /api/workflows/approvals` - List pending approval requests
+- `POST /api/workflows/approvals/[id]` - Respond to approval request (approve/reject/delegate)
 
 ### Analytics & Insights
 
-- `GET /api/analytics/dashboard` - Get analytics dashboard data
-- `GET /api/analytics/trends` - Get trend analysis data
-- `GET /api/analytics/predictions` - Get AI-powered predictions
-- `POST /api/analytics/events` - Track analytics events
+- `GET /api/analytics/dashboard` - Get comprehensive dashboard data with metrics
+- `GET /api/analytics/trends` - Get trend analysis with customizable time periods
+- `GET /api/analytics/predictions` - Get AI-powered predictions for document lifecycle
+- `POST /api/analytics/events` - Track user interactions and system events
+- `GET /api/analytics/reports` - Get custom reports with filtering options
 
 ### External Integrations
 
-- `GET /api/integrations/google/auth` - Google OAuth authentication
-- `GET /api/integrations/google/drive/files` - List Google Drive files
-- `POST /api/integrations/google/sync` - Sync Google Workspace data
-- `GET /api/integrations/microsoft/auth` - Microsoft OAuth authentication
-- `GET /api/integrations/microsoft/onedrive/files` - List OneDrive files
-- `POST /api/integrations/microsoft/sync` - Sync Microsoft 365 data
+**Google Workspace**
 
-## Project Structure
+- `GET /api/integrations/google/auth` - Google OAuth authentication flow
+- `GET /api/integrations/google/drive/files` - List and search Google Drive files
+- `GET /api/integrations/google/drive/files/[fileId]` - Get specific Drive file
+- `GET /api/integrations/google/docs` - Access Google Docs content
+- `POST /api/integrations/google/sync` - Sync Google Workspace data
+- `POST /api/integrations/google/webhooks` - Handle Google service webhooks
+
+**Microsoft 365**
+
+- `GET /api/integrations/microsoft/auth` - Microsoft OAuth authentication flow
+- `GET /api/integrations/microsoft/onedrive/files` - List and search OneDrive files
+- `GET /api/integrations/microsoft/onedrive/files/[fileId]` - Get specific OneDrive file
+- `GET /api/integrations/microsoft/teams` - Access Teams channels and messages
+- `GET /api/integrations/microsoft/outlook/messages` - Access Outlook emails
+- `GET /api/integrations/microsoft/sharepoint/sites` - Access SharePoint sites
+- `POST /api/integrations/microsoft/sync` - Sync Microsoft 365 data
+- `POST /api/integrations/microsoft/webhooks` - Handle Microsoft service webhooks
+
+## 📁 Project Structure
 
 ```
 papramind/
 ├── src/
-│   ├── app/                 # Next.js app directory
-│   │   └── api/            # API route handlers
-│   │     ├── auth/         # Authentication endpoints
-│   │     ├── documents/    # Document management APIs
-│   │     ├── upload/       # File upload endpoints
-│   │     ├── ai/           # AI integration APIs
-│   │     ├── search/       # Search and discovery APIs
-│   │     ├── workflows/    # Workflow automation APIs
-│   │     ├── analytics/    # Analytics and insights APIs
-│   │     └── integrations/ # External service integrations
-│   ├── lib/                 # Core business logic
-│   │   ├── auth/           # Authentication & authorization
-│   │   ├── db/             # Database schema and operations
-│   │   ├── services/       # Business logic services
-│   │   ├── storage/        # File storage integration
-│   │   ├── security/       # Security utilities
-│   │   ├── validation/     # Input validation schemas
-│   │   ├── ai/             # AI integration services
-│   │   ├── vector/         # Vector search services
-│   │   ├── search/         # Elasticsearch integration
-│   │   ├── upload/         # File upload services
-│   │   ├── jobs/           # Background job processing
-│   │   └── middleware/     # Request middleware
-│   ├── components/          # React UI components
-│   │   ├── analytics/      # Analytics dashboard components
-│   │   └── workflow/       # Workflow builder components
-│   ├── hooks/              # Custom React hooks
-│   └── types/              # TypeScript type definitions
-├── tests/                  # Comprehensive test suite
-│   ├── auth/              # Authentication tests
-│   ├── document/          # Document management tests
-│   ├── upload/            # File upload tests
-│   ├── ai/                # AI integration tests
-│   ├── vector/            # Vector search tests
-│   ├── search/            # Search functionality tests
-│   ├── workflow/          # Workflow automation tests
-│   ├── analytics/         # Analytics system tests
-│   └── integrations/      # External integration tests
-├── config/                  # Configuration files
-├── scripts/                 # Database and utility scripts
-├── docs/                    # Technical documentation
-├── docker-compose.yml       # Development environment
-└── Dockerfile              # Production container
+│   ├── app/                    # Next.js 14 App Router
+│   │   ├── analytics/         # Analytics dashboard pages
+│   │   ├── workflows/         # Workflow management pages
+│   │   ├── demo/              # Demo and testing pages
+│   │   └── api/               # API route handlers
+│   │     ├── auth/            # Authentication endpoints
+│   │     ├── documents/       # Document management APIs
+│   │     ├── upload/          # File upload endpoints
+│   │     ├── ai/              # AI integration APIs
+│   │     ├── search/          # Search and discovery APIs
+│   │     ├── workflows/       # Workflow automation APIs
+│   │     ├── analytics/       # Analytics and insights APIs
+│   │     └── integrations/    # External service integrations
+│   │       ├── google/        # Google Workspace integration
+│   │       └── microsoft/     # Microsoft 365 integration
+│   ├── lib/                   # Core business logic
+│   │   ├── auth/              # Authentication & authorization
+│   │   ├── db/                # Database schema and operations
+│   │   │   ├── schema/        # Drizzle ORM schemas
+│   │   │   └── seeds/         # Database seeding scripts
+│   │   ├── services/          # Business logic services
+│   │   │   ├── google-*.ts    # Google Workspace services
+│   │   │   ├── microsoft-*.ts # Microsoft 365 services
+│   │   │   ├── workflow-*.ts  # Workflow automation services
+│   │   │   └── analytics.ts   # Analytics service
+│   │   ├── storage/           # File storage integration
+│   │   ├── security/          # Security utilities
+│   │   ├── validation/        # Input validation schemas
+│   │   ├── ai/                # AI integration services
+│   │   ├── vector/            # Vector search services
+│   │   ├── search/            # Elasticsearch integration
+│   │   ├── upload/            # File upload services
+│   │   ├── jobs/              # Background job processing
+│   │   └── middleware/        # Request middleware
+│   ├── components/            # React UI components
+│   │   ├── analytics/         # Analytics dashboard components
+│   │   │   ├── analytics-dashboard.tsx
+│   │   │   ├── predictive-insights.tsx
+│   │   │   ├── trends-analysis.tsx
+│   │   │   └── custom-reports.tsx
+│   │   └── workflow/          # Workflow builder components
+│   │       ├── workflow-builder.tsx
+│   │       ├── workflow-canvas.tsx
+│   │       ├── workflow-step-node.tsx
+│   │       └── workflow-template-library.tsx
+│   ├── hooks/                 # Custom React hooks
+│   │   └── useAnalytics.ts    # Analytics tracking hook
+│   └── types/                 # TypeScript type definitions
+│       ├── workflow.ts        # Workflow system types
+│       ├── google.ts          # Google integration types
+│       ├── microsoft.ts       # Microsoft integration types
+│       └── analytics.ts       # Analytics types
+├── tests/                     # Comprehensive test suite (95%+ coverage)
+│   ├── auth/                  # Authentication tests
+│   ├── document/              # Document management tests
+│   ├── upload/                # File upload tests
+│   ├── ai/                    # AI integration tests
+│   ├── vector/                # Vector search tests
+│   ├── search/                # Search functionality tests
+│   ├── workflow/              # Workflow automation tests
+│   ├── analytics/             # Analytics system tests
+│   └── integrations/          # External integration tests
+│       ├── google-*.test.ts   # Google Workspace tests
+│       └── microsoft-*.test.ts # Microsoft 365 tests
+├── migrations/                # Database migrations
+│   ├── 0002_add_workflow_tables.sql
+│   ├── 0003_add_google_integrations.sql
+│   └── 0004_add_microsoft_integrations.sql
+├── config/                    # Configuration files
+├── scripts/                   # Database and utility scripts
+│   ├── setup-elasticsearch.ts
+│   ├── setup-vector-database.ts
+│   ├── setup-github.sh/.bat
+│   └── validate-*.js         # Implementation validation scripts
+├── docs/                      # Technical documentation
+│   ├── implementation-status.md
+│   ├── deployment-guide.md
+│   └── development-guide.md
+├── .kiro/                     # Kiro AI assistant configuration
+│   └── steering/              # AI development guidelines
+├── docker-compose.yml         # Development environment
+├── Dockerfile                 # Production container
+├── railway.json              # Railway deployment config
+└── package.json              # Dependencies and scripts
 ```
 
-## Environment Variables
+## 🔐 Environment Variables
 
 Key environment variables (see `.env.example` for complete list):
 
 ### Database & Storage
 
-- `DB_HOST`, `DB_PORT`, `DB_NAME` - Database configuration
-- `REDIS_HOST`, `REDIS_PORT` - Redis configuration
+- `DATABASE_URL` - PostgreSQL connection string
+- `REDIS_URL` - Redis connection string
 - `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `AWS_S3_BUCKET` - File storage
 
 ### Search & AI
 
-- `ELASTICSEARCH_URL` - Elasticsearch configuration
+- `ELASTICSEARCH_URL` - Elasticsearch cluster endpoint
 - `OPENAI_API_KEY` - OpenAI GPT-4 API access
 - `PINECONE_API_KEY`, `PINECONE_ENVIRONMENT`, `PINECONE_INDEX_NAME` - Vector search
 
@@ -405,8 +508,21 @@ Key environment variables (see `.env.example` for complete list):
 
 - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` - Clerk public key
 - `CLERK_SECRET_KEY` - Clerk secret key
-- `JWT_SECRET`, `JWT_REFRESH_SECRET` - Authentication secrets (legacy)
+- `CLERK_WEBHOOK_SECRET` - Clerk webhook verification
 - `ENCRYPTION_KEY` - Data encryption key
+
+### External Integrations
+
+- `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` - Google Workspace OAuth
+- `MICROSOFT_CLIENT_ID`, `MICROSOFT_CLIENT_SECRET` - Microsoft 365 OAuth
+- `GOOGLE_SERVICE_ACCOUNT_KEY` - Google service account (JSON)
+- `MICROSOFT_TENANT_ID` - Microsoft tenant configuration
+
+### Application Settings
+
+- `NEXT_PUBLIC_APP_URL` - Application base URL
+- `NODE_ENV` - Environment (development/production)
+- `LOG_LEVEL` - Logging level (debug/info/warn/error)
 
 ## Contributing
 
